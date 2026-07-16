@@ -304,3 +304,13 @@ a.proj-link{text-decoration:none;color:inherit;display:block}
 .proj:hover {
   opacity: 0.85;
 }
+
+/* Remove unused case-study title space */
+.cs-hero .cs-title {
+  display: none !important;
+}
+
+/* Pull the main case-study image closer to the project information */
+.cs-hero .cs-hero-img {
+  margin-top: 40px !important;
+}
