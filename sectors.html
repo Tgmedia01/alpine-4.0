@@ -16,7 +16,7 @@
 .sector{display:grid;grid-template-columns:80px 1fr 320px 1fr 60px;gap:2.5rem;align-items:stretch;padding:0;border-bottom:1px solid var(--rule);position:relative;background:var(--paper);transition:background .35s var(--ease);cursor:pointer;text-decoration:none;color:inherit}
 .sector:hover{background:var(--paper-2)}
 .sector::after{content:'';position:absolute;left:0;top:0;width:0;height:2px;background:var(--teal);transition:width .8s var(--ease)}
-.sector.in::after{width:100%}
+.sector:hover::after{width:100%}
 .sector-no{padding:3.5rem 0 3.5rem 2rem;font-family:var(--fm);font-size:.66rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);align-self:start}
 .sector-no b{display:block;color:var(--ink);font-weight:600;font-size:.78rem;margin-bottom:.4rem}
 .sector-name{padding:3rem 0;align-self:center}
