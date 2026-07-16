@@ -1,0 +1,11 @@
+ALPINE MI 3.0 — REBUILT SECTOR PROJECT MAPPING
+
+Changes:
+- Removed the obsolete leisure case study and deleted its page and links.
+- Hospitality now shows only KÖD Soho, Fenchurch Sky Garden and Revolve.
+- Leisure now shows only Solo Sixty Fleet Street, Moorgate and St Katharine Docks.
+- Office now shows the Office South London case study once.
+- Residential now shows the Malvern, Hackney case study once.
+- Retail no longer shows unrelated or unpublished case studies; it displays a coming-soon message.
+- All project counts and card numbering were corrected.
+- All local HTML, CSS, JS and image references were validated after rebuilding.

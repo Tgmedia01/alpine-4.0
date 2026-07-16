@@ -1,0 +1,9 @@
+Alpine MI full refresh package
+
+Changes in this package only:
+- Removed the gallery from Fenchurch Sky Garden.
+- Removed the gallery from Hackney Tap.
+- Removed the gallery from Darwin Brasserie.
+- Standardised the Next Project CTA on Darwin, Hackney Tap, Leafy Elephant, Sidcup Extension and Malvern to match the established case-study design.
+- Verified stylesheet paths on root, sector and case-study pages.
+- Verified local HTML asset references: no missing local files.

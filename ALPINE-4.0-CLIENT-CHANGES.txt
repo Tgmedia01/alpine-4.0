@@ -1,0 +1,9 @@
+ALPINE 4.0 CLIENT UPDATE
+
+- Added Rhubarb Offices case study and imagery.
+- Added Royal London Hospital Dental Department case study and imagery.
+- Updated Projects page and filter totals.
+- Updated Office and Hospitality sector project selections (maximum 3 cards).
+- Applied requested Fenchurch, Darwin, Fleet Street, Hackney Tap, Porte Noir and Leafy Elephant changes.
+- Reduced excess top spacing on project pages.
+- Preserved all other existing website content and styling.

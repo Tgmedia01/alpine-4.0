@@ -1,0 +1,1 @@
+Added Darwin Brasserie, Hackney Tap, The Leafy Elephant and Sidcup Extension case studies. Updated Projects, Hospitality and Residential sector pages. Removed duplicate homepage horizontal-track drag handler so desktop project links work. No other intentional changes.

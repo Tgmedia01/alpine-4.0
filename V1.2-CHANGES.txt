@@ -1,0 +1,22 @@
+ALPINE MI — VERSION 1.2 CHANGES
+
+1. HOME PAGE — CLIENTS DIVIDER
+- The black divider below the Clients heading now runs to both viewport edges.
+- Client labels and logos remain aligned to the existing site padding.
+- The fix uses a full-width pseudo-element, so it remains edge-to-edge on 14-inch and 16-inch MacBooks and larger displays.
+
+2. IMAGE LOADING
+- Added asynchronous image decoding throughout the HTML pages.
+- Added native lazy loading to images below the initial hero/navigation area.
+- Navigation and hero imagery remains eager-loaded to avoid delaying above-the-fold content.
+
+3. GITHUB PAGES
+- Added a .nojekyll file so GitHub Pages serves the static site directly without Jekyll processing.
+
+4. CLEAN-UP AND VALIDATION
+- Removed operating-system metadata files where present.
+- Checked local HTML, CSS, JavaScript and image references.
+- No missing local references were found.
+
+DESIGN
+- No typography, approved layouts, colours, wording, animations or case-study content were intentionally changed in this pass.

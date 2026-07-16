@@ -1,0 +1,22 @@
+ALPINE MI 3.0 — VERIFIED ORGANISED BUILD
+
+Structure
+- Main pages remain in the repository root for GitHub Pages.
+- Case studies are in /case-studies.
+- Sector detail pages are in /sectors.
+- Shared CSS and JavaScript are in /assets/css and /assets/js.
+- Images are grouped under /assets/images.
+
+Verification completed
+- 20 HTML pages checked.
+- 758 local href/src references checked.
+- 0 missing local files found.
+- No remaining references to case-solo-cornhill.html.
+- No remaining references to case-showroom-se9.html.
+- No remaining reference to the former broken case-office-sidcup.html route.
+- Fenchurch case study and its project/sector links are present.
+- GitHub Pages .nojekyll file included.
+
+Publishing
+Upload the contents of this folder so index.html is at the repository root.
+GitHub Pages: Settings > Pages > Deploy from a branch > main > /(root).

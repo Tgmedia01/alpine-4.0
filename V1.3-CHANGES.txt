@@ -1,0 +1,12 @@
+ALPINE MI V1.3 — FILE ORGANISATION
+
+- Kept primary website pages in the repository root for straightforward GitHub Pages publishing.
+- Moved individual case-study pages into /case-studies.
+- Moved individual sector pages into /sectors.
+- Moved shared.css into /assets/css.
+- Moved shared.js into /assets/js.
+- Grouped logos and accreditation graphics under /assets/images/logos.
+- Grouped project photography under /assets/images/projects by project.
+- Moved remaining imagery into /assets/images/general.
+- Updated all HTML links and image/script/stylesheet paths.
+- Preserved the V1.2 design and behaviour.

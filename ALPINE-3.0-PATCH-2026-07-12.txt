@@ -1,0 +1,9 @@
+Alpine 3.0 patch — 12 July 2026
+
+Changed:
+- Removed the Solo Sixty Cornhill card from the Leisure sector selected-work section.
+- Updated the Leisure sector selected-work count from 3 to 2 and renumbered remaining cards.
+- Removed the stale Showroom SE9 next-project block from the Solo Sixty Hanbury case study.
+- Replaced the homepage Solo Sixty image with Solo sixty great eastern.jpg.
+- Centralised accreditation-logo styling in assets/css/shared.css so every page exactly matches the homepage.
+- Removed duplicated page-level accreditation overrides.

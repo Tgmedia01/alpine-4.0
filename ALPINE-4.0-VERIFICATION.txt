@@ -1,0 +1,16 @@
+ALPINE 4.0 — VERIFIED BUILD
+
+Base: latest supplied GitHub download (alpine-3.0-main(1).zip)
+
+Included:
+- Rhubarb Offices case study and supplied imagery
+- Royal London Hospital Dental Department case study and supplied imagery
+- Client-requested changes to Fenchurch, Darwin, Hackney Tap, Porte Noir, Leafy Elephant and Fleet Street
+- Projects page updated to 17 schemes with matching filter totals
+- Office and Hospitality sector selections updated, with a maximum of 3 cards per individual sector page
+- Project-page hero spacing reduced consistently
+- GitHub Pages .nojekyll marker included
+
+Validation:
+- Local HTML/link/image/CSS/JS references checked
+- No missing local references found

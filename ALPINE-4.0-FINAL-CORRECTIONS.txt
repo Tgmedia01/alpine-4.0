@@ -1,0 +1,9 @@
+ALPINE 4.0 — FINAL CORRECTIONS
+
+Corrected after audit:
+- Projects hero count updated from 15 to 17.
+- Residential selected-work count updated to 02 projects (Malvern and Sidcup).
+- Hackney Tap section corrected to the client-supplied structural steel mezzanine content.
+- Leafy Elephant feature-bar section corrected to the client-supplied bespoke timber bar content.
+- No additional residential case study was invented because no third residential project assets or brief were supplied.
+- The ambiguous “Blue line?” annotation was not guessed; existing approved divider styling is retained.
