@@ -154,50 +154,73 @@
 })();
 
 // ── HORIZONTAL PROJECT TRACK DRAG-TO-SCROLL ──
-(function(){
+(function () {
   const track = document.getElementById('htrack');
-  if(!track) return;
+  if (!track) return;
 
-  const wrap = track.parentElement; // .htrack-outer
-  let isDown = false, startX = 0, scrollX = 0, didDrag = false;
+  const wrap = track.parentElement;
 
-  // Enable horizontal scroll (CSS has overflow:hidden as fallback; JS overrides X axis)
+  let pointerDown = false;
+  let dragging = false;
+  let startX = 0;
+  let startScrollLeft = 0;
+
   wrap.style.overflowX = 'auto';
-  wrap.style.scrollbarWidth = 'none'; // Firefox
-  // Webkit scrollbar hide
-  const _s = document.createElement('style');
-  _s.textContent = '.htrack-outer::-webkit-scrollbar{display:none}';
-  document.head.appendChild(_s);
+  wrap.style.scrollbarWidth = 'none';
+
+  const scrollbarStyle = document.createElement('style');
+  scrollbarStyle.textContent =
+    '.htrack-outer::-webkit-scrollbar{display:none}';
+  document.head.appendChild(scrollbarStyle);
+
   track.style.cursor = 'grab';
 
-  track.addEventListener('pointerdown', e => {
-    isDown = true; didDrag = false;
-    startX = e.clientX; scrollX = wrap.scrollLeft;
-    track.setPointerCapture(e.pointerId);
-    track.style.cursor = 'grabbing';
+  track.addEventListener('pointerdown', function (event) {
+    pointerDown = true;
+    dragging = false;
+    startX = event.clientX;
+    startScrollLeft = wrap.scrollLeft;
   });
 
-  track.addEventListener('pointermove', e => {
-    if(!isDown) return;
-    const dx = e.clientX - startX;
-    if(Math.abs(dx) > 4) didDrag = true;
-    wrap.scrollLeft = scrollX - dx;
+  track.addEventListener('pointermove', function (event) {
+    if (!pointerDown) return;
+
+    const movement = event.clientX - startX;
+
+    if (Math.abs(movement) > 10) {
+      dragging = true;
+      wrap.scrollLeft = startScrollLeft - movement;
+      track.style.cursor = 'grabbing';
+    }
   });
 
-  track.addEventListener('pointerup', e => {
-    // Must release capture so child <a> elements can receive click events
-    if(track.hasPointerCapture(e.pointerId)) track.releasePointerCapture(e.pointerId);
-    isDown = false;
+  function finishPointer() {
+    pointerDown = false;
     track.style.cursor = 'grab';
+  }
+
+  track.addEventListener('pointerup', finishPointer);
+  track.addEventListener('pointercancel', finishPointer);
+  track.addEventListener('pointerleave', finishPointer);
+
+  track.querySelectorAll('a').forEach(function (projectLink) {
+    projectLink.addEventListener('click', function (event) {
+      if (dragging) {
+        event.preventDefault();
+        event.stopPropagation();
+        dragging = false;
+      }
+    });
   });
 
-  // Suppress navigation only when the gesture was a real drag (>4px movement)
-  track.addEventListener('click', e => {
-    if(didDrag){ e.preventDefault(); e.stopPropagation(); didDrag = false; }
-  }, { capture: true });
-
-  // Shift+wheel = horizontal scroll on desktop trackpads/mice
-  wrap.addEventListener('wheel', e => {
-    if(e.shiftKey){ wrap.scrollLeft += e.deltaY; e.preventDefault(); }
-  }, { passive: false });
+  wrap.addEventListener(
+    'wheel',
+    function (event) {
+      if (event.shiftKey) {
+        wrap.scrollLeft += event.deltaY;
+        event.preventDefault();
+      }
+    },
+    { passive: false }
+  );
 })();
