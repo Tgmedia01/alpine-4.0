@@ -12,7 +12,9 @@
 <link href="assets/css/shared.css" rel="stylesheet"/>
 <style>
 /* ── SECTORS LIST ── */
-.sectors{border-top:2px solid var(--ink)}
+.sectors{
+    border-top:1px solid var(--rule);
+}
 .sector{display:grid;grid-template-columns:80px 1fr 320px 1fr 60px;gap:2.5rem;align-items:stretch;padding:0;border-bottom:1px solid var(--rule);position:relative;background:var(--paper);transition:background .35s var(--ease);cursor:pointer;text-decoration:none;color:inherit}
 .sector:hover{background:var(--paper-2)}
 .sector::after{content:'';position:absolute;left:0;top:0;width:0;height:2px;background:var(--teal);transition:width .8s var(--ease)}
