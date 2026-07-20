@@ -10,6 +10,181 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
 <link href="../assets/css/shared.css" rel="stylesheet"/>
+<style>
+/* ==========================
+   NEXT PROJECT
+========================== */
+.next-project{
+  position:relative;
+  background:#050505;
+  color:#fff;
+  padding:5rem var(--pad, 2rem);
+  overflow:hidden;
+}
+
+.np-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:2rem;
+  margin-bottom:2rem;
+}
+
+.np-no,
+.np-back{
+  font-family:var(--fm, "JetBrains Mono", monospace);
+  font-size:.65rem;
+  font-weight:500;
+  letter-spacing:.14em;
+  line-height:1;
+  text-transform:uppercase;
+}
+
+.np-no{
+  color:rgba(255,255,255,.55);
+}
+
+.np-no::first-letter{
+  color:var(--teal, #14d8bc);
+}
+
+.np-back{
+  color:rgba(255,255,255,.65);
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.15);
+  padding-bottom:.4rem;
+  transition:color .25s ease, border-color .25s ease;
+}
+
+.np-back:hover{
+  color:var(--teal, #14d8bc);
+  border-color:var(--teal, #14d8bc);
+}
+
+.np-link{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:2rem;
+  text-decoration:none;
+  color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.12);
+  min-height:320px;
+  position:relative;
+}
+
+.np-title{
+  margin:0;
+  padding-bottom:3rem;
+  max-width:85%;
+  font-family:var(--fd, "Space Grotesk", sans-serif);
+  font-size:clamp(5rem,11vw,11rem);
+  font-weight:700;
+  line-height:.78;
+  letter-spacing:-.06em;
+  text-transform:uppercase;
+}
+
+.np-title span{
+  display:inline-block;
+  font-weight:400;
+  color:rgba(255,255,255,.5);
+}
+
+.np-link::after{
+  content:"";
+  position:absolute;
+  top:40%;
+  left:50%;
+  width:120px;
+  height:12px;
+  background:var(--teal, #14d8bc);
+  transform:translate(-50%,-50%);
+  transition:width .35s ease;
+}
+
+.np-link:hover::after{
+  width:180px;
+}
+
+.np-arrow{
+  flex-shrink:0;
+  font-family:var(--fd, "Space Grotesk", sans-serif);
+  font-size:3rem;
+  color:var(--teal, #14d8bc);
+  padding-bottom:3rem;
+  transition:transform .25s ease;
+}
+
+.np-link:hover .np-arrow{
+  transform:translate(8px,-8px);
+}
+
+.np-meta{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:2rem;
+  padding-top:2rem;
+}
+
+.np-meta > div{
+  display:flex;
+  flex-direction:column;
+  gap:.6rem;
+}
+
+.np-meta span{
+  display:block;
+  font-family:var(--fm, "JetBrains Mono", monospace);
+  font-size:.6rem;
+  font-style:italic;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.45);
+}
+
+.np-meta strong{
+  font-family:var(--fm, "JetBrains Mono", monospace);
+  font-size:.72rem;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#fff;
+}
+
+@media(max-width:860px){
+  .next-project{
+    padding:3rem 1.25rem;
+  }
+
+  .np-top{
+    align-items:flex-start;
+  }
+
+  .np-link{
+    min-height:220px;
+  }
+
+  .np-title{
+    max-width:calc(100% - 45px);
+    font-size:clamp(3.2rem,15vw,6rem);
+    padding-bottom:2rem;
+  }
+
+  .np-link::after{
+    display:none;
+  }
+
+  .np-arrow{
+    padding-bottom:2rem;
+  }
+
+  .np-meta{
+    grid-template-columns:1fr 1fr;
+    gap:1.5rem;
+  }
+}
+</style>
 </head>
 <body>
 <div class="loader" id="loader">
